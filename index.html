@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Demonstration of FireFox SVG rendering bug</title>
+		<meta name="description" content="Demonstrates a rendering problem with FireFox where an SVG is displayed blurry when scaled up using CSS `transform: scale()`">
+		<style>
+			body {
+				text-align: center;
+			}
+			img {
+				padding: 40px 0 0;
+				transform: rotate(1deg) scale(10);
+				/* transform: scale(10) rotate(1deg); */  /* same effect */
+			}
+			img:hover {
+				transform: scale(10);
+			}
+		</style>
+	</head>
+	<body>
+		<img src="hyper-turtle.svg">
+	</body>
+</html>
